@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome</title>
+    <link rel="stylesheet" href="{% static 'css/indexStyle.css' %}">
+</head>
+<body>
+    <h2>*** Book My Show ***</h2>
+    <h3>Welcome {{name}}</h3>
+    <button onclick="window.location.href='/testApp/add'">Add New Movie</button>
+    <button onclick="window.location.href='/testApp/list'">watch latest movie list</button>
+</body>
+</html>

@@ -1,0 +1,205 @@
+
+/* =================================
+   1. GLOBAL STYLING
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+}
+
+/* =================================
+   2. MAIN HEADING
+================================= */
+
+h2 {
+    color: #ff4757;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    text-shadow: 2px 3px 10px black;
+}
+
+/* =================================
+   3. SUB HEADING
+================================= */
+
+h3 {
+    color: white;
+    font-size: 23px;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+}
+
+/* =================================
+   4. TABLE STYLING
+================================= */
+
+table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    border-collapse: collapse;
+    background: white;
+    color: #2f3542;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: none;
+}
+
+/* =================================
+   5. TABLE HEADER
+================================= */
+
+th {
+    background: linear-gradient(135deg, #ff4757, #e84118);
+    color: white;
+    padding: 17px 12px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+}
+
+/* =================================
+   6. TABLE DATA
+================================= */
+
+td {
+    padding: 15px 12px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid #dfe4ea;
+}
+
+/* Alternate row colors */
+
+tr:nth-child(even) td {
+    background-color: #f1f2f6;
+}
+
+tr:nth-child(odd) td {
+    background-color: #ffffff;
+}
+
+/* =================================
+   7. TABLE HOVER EFFECT
+================================= */
+
+tbody tr:hover td {
+    background-color: #ffe0e3;
+    transition: all 0.3s ease;
+}
+
+/* =================================
+   8. NO DATA MESSAGE
+================================= */
+
+body > h3:last-of-type {
+    color: #ff6b81;
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+/* =================================
+   9. BACK BUTTON
+================================= */
+
+body > button {
+    display: block;
+    width: 180px;
+    padding: 13px 20px;
+    margin: 25px auto;
+
+    background: linear-gradient(135deg, #3742fa, #5352ed);
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Back button hover */
+
+body > button:hover {
+    background: linear-gradient(135deg, #5352ed, #3742fa);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Back button click */
+
+body > button:active {
+    transform: scale(0.96);
+}
+
+/* =================================
+   10. RESPONSIVE TABLE
+================================= */
+
+@media screen and (max-width: 900px) {
+
+    body {
+        padding: 25px 12px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding: 12px 15px;
+        font-size: 13px;
+    }
+}
+
+/* =================================
+   11. MOBILE DESIGN
+================================= */
+
+@media screen and (max-width: 480px) {
+
+    body {
+        padding: 20px 8px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    body > button {
+        width: 85%;
+        max-width: 280px;
+    }
+}

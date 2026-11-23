@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+    <link rel="stylesheet" href="{% static 'css/list.css' %}">
+</head>
+<body>
+    <h2>*** Book My Show ***</h2>
+    <h3>** Available Movies **</h3>
+    {% if list %}
+    <table border="2">
+        <tr>
+            <th>name</th>
+            <th>genre</th>
+            <th>director</th>
+            <th>actor</th>
+            <th>actress</th>
+            <th>rdate</th>
+            <th>language</th>
+            <th>rating</th>
+        </tr>
+        {% for i in list %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.genre}}</td>
+            <td>{{i.director}}</td>
+            <td>{{i.actor}}</td>
+            <td>{{i.actress}}</td>
+            <td>{{i.rdate}}</td>
+            <td>{{i.language}}</td>
+            <td>{{i.rating}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <h3>Sorry! No Data Found....</h3>
+    {% endif %}
+
+    <button onclick="window.location.href='/testApp/'">Back</button>
+</body>
+</html>

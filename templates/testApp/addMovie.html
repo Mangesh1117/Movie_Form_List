@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add movie</title>
+    <link rel="stylesheet" href="{% static 'css/add.css' %}">
+</head>
+<body>
+    <h2>*** Book My Show ***</h2>
+    <h3>** Add Movies Tab **</h3>
+    {% if submit == False %}
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" name="submit">
+    </form>
+    {% else %}
+    <h3>Thank You! response submitted</h3>
+    {% endif %}
+    <button onclick="window.location.href='/testApp/'">Back</button>
+</body>
+</html>
